@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SmallTalk</string>
+    <string name="app_name_string">SmallTalk on Android</string>
+    <string name="enter_text_message">Введите текст сообщения</string>
+    <string name="send_message">Send</string>
+    <string name="password_text">Password</string>
+    <string name="auth_button">Авторизация</string>
+    <string name="e_mail_login_text">E-mail или Login</string>
+    <string name="sign_up_text">Sign up</string>
+    <string name="password">Пароль</string>
+    <string name="plain_text">$$$</string>
+    <string name="sender">sender</string>
+    <string name="message_form">message_form</string>
+    <string name="message_time">message_time</string>
+    <string name="message_date">message_date</string>
+</resources>
