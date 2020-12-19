@@ -18,6 +18,13 @@
         </activity>
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".ChatsList"/>
+        <activity android:name=".ChatActivity"/>
+        <activity android:name=".ChatInfo"/>
+        <activity android:name=".AddChat"/>
+        <activity android:name=".AddToChat"/>
+        <activity android:name=".UserSettings"/>
+
+
 
 
     </application>

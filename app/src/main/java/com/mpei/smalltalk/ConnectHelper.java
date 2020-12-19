@@ -1,4 +1,4 @@
-/*package com.mpei.smalltalk;
+package com.mpei.smalltalk;
 
 import android.os.AsyncTask;
 import android.widget.Toast;
@@ -11,20 +11,14 @@ public class ConnectHelper extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String[] objects) {
         try{
-            String url = "jdbc:mysql://localhost/store";
-            String username = "root";
-            String password = "password";
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            try (Connection conn = DriverManager.getConnection(url, username, password)){
+            try (Connection conn = DriverManager.getConnection(objects[0], objects[1], objects[2])){ //url, user,password
 
-                System.out.println("Connection to Store DB successful!");
+                return "Connection to Store DB successful!";
             }
         }
         catch(Exception ex){
-            System.out.println();
-
             System.out.println(ex);
+            return "Error";
         }
-        return ;
     }
-}*/
+}

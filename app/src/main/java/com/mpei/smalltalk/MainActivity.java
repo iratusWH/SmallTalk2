@@ -13,17 +13,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected String userLogin;
     protected String userPassword;
 
+    protected String url = "jdbc:postgresql://localhost:5432/Messanger";
+    protected String username = "root";
+    protected String password = "password";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
         Button button = (Button) findViewById(R.id.buttonAuth);
         button.setOnClickListener(this);
+        ConnectHelper connect = new ConnectHelper();
+        Toast.makeText(this,connect.doInBackground(new String[]{url, username, password}), Toast.LENGTH_LONG).show();
     }
 
 
     public void onSignUpClick(View view){
-        Toast.makeText(this, "Регистрация", Toast.LENGTH_SHORT).show();
+        //connectHelper firstConnect = new connectHelper();
+        Toast.makeText(this, "Регистрация" /*firstConnect.dataBaseOutput()*/, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
         startActivity(intent);
     }
