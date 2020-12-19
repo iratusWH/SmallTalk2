@@ -13,7 +13,11 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        android:clickable="true"
+        android:onClick="onClickChatActivity"
+        tools:ignore="OnClick"
+        android:focusable="true" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -25,9 +29,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        android:onClick="onClickAddChat"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:ignore="OnClick"
+        android:focusable="true" />
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/message_recycler"
+        app:layout_constraintVertical_bias="0.969"
+        android:onClick="onClickUserSettings"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
